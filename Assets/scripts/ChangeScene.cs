@@ -12,6 +12,7 @@ public class ChangeScene : MonoBehaviour
     public void Start()
     {
         transition = GetComponentInChildren<Animator>();
+        Debug.Log("aca llegue");
         if (imgBlack)
         {
             StartCoroutine(sleep());
@@ -20,7 +21,6 @@ public class ChangeScene : MonoBehaviour
 
     public void changeNewScena(string scena)
     {
-        Debug.Log(scena);
         StartCoroutine(transitionScena(scena));
     }
 
