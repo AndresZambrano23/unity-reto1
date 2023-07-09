@@ -12,11 +12,17 @@ public class Coin : MonoBehaviour
         gameObject.SetActive(false);
         //Destroy(gameObject);
 
-        if (SceneManager.GetActiveScene().name == "Nivel_1") {
-            SceneManager.LoadScene("Nivel_2");
-        }
-        else {
-            SceneManager.LoadScene("Nivel_1");
+        string scene = SceneManager.GetActiveScene().name;
+        switch (scene)
+        {
+            case "level1":
+                Debug.Log("level2");
+                //SceneManager.LoadScene("level2");
+                break;
+
+            case "level2":
+                Debug.Log("level3");
+                break;
         }
 
     }

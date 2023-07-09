@@ -30,13 +30,11 @@ public class MovimientoPlayer : MonoBehaviour
     {
         if (isLeft || Input.GetKey("left"))
         {
-            Debug.Log("Izquierda");
             rb.AddForce(new Vector2(-speedForce, 0) * Time.deltaTime);
         }
 
         if (isRigth || Input.GetKey("right"))
         {
-            Debug.Log("Derecha");
             rb.AddForce(new Vector2(speedForce, 0) * Time.deltaTime);
         }
 
